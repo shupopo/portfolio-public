@@ -76,7 +76,7 @@ const projects: Project[] = [
   {
     id: 'ec-automation',
     title: 'ECサイト運営自動化ツール',
-    description: '5年間の個人開発プロジェクト。Amazon、Yahoo Shopping、au PAYマーケット向けの業務自動化システム。商品リサーチ、出品、価格管理、在庫管理を完全自動化し、大幅な工数削減を実現。',
+    description: '自身が運営するAmazon、Yahoo Shopping、au PAYマーケット向けの業務自動化システム。商品リサーチ、出品、価格管理、在庫管理を完全自動化し、大幅な工数削減を実現。',
     tech: ['Node.js', 'Python', 'Amazon MWS API', 'Yahoo Shopping API', 'Puppeteer'],
     category: 'automation',
     featured: true
