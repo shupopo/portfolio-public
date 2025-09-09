@@ -5,12 +5,12 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '廣島周平 - 自動化・効率化エンジニア',
+  title: 'Shuhei HIROSHIMA - 自動化・効率化エンジニア',
   description: 'ビジネス課題を技術で解決し、業務効率化を実現するフリーランスエンジニア。Spring Boot、AWS、自動化ツール開発の専門家。',
-  keywords: ['廣島周平', 'フリーランスエンジニア', '自動化', '効率化', 'Spring Boot', 'AWS', 'Java'],
-  authors: [{ name: '廣島周平' }],
+  keywords: ['Shuhei HIROSHIMA', 'フリーランスエンジニア', '自動化', '効率化', 'Spring Boot', 'AWS', 'Java'],
+  authors: [{ name: 'Shuhei HIROSHIMA' }],
   openGraph: {
-    title: '廣島周平 - 自動化・効率化エンジニア',
+    title: 'Shuhei HIROSHIMA - 自動化・効率化エンジニア',
     description: 'ビジネス課題を技術で解決し、業務効率化を実現するフリーランスエンジニア',
     type: 'website',
     locale: 'ja_JP',
