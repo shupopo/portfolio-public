@@ -79,7 +79,7 @@ const projects: Project[] = [
     description: '自身が運営するAmazon、Yahoo Shopping、au PAYマーケット向けの業務自動化システム。商品リサーチ、出品、価格管理、在庫管理を完全自動化し、大幅な工数削減を実現。',
     tech: ['Node.js', 'Python', 'Amazon MWS API', 'Yahoo Shopping API', 'Puppeteer'],
     category: 'automation',
-    featured: true
+    featured: false
   },
   {
     id: 'crypto-wallet',
@@ -94,7 +94,16 @@ const projects: Project[] = [
     title: '学術向け画像解析データベース',
     description: '学術研究用の画像解析データベースシステム。外部DB連携、データ整合性向上、UI改善を担当。研究者の効率的なデータ活用を支援。',
     tech: ['Java', 'Spring Boot', 'Vue.js', 'MySQL', 'Docker'],
-    url: 'https://localizatome.embrys.jp/',
+    category: 'web',
+    featured: true
+  },
+    {
+    id: 'portfolio-site',
+    title: 'エンジニアポートフォリオサイト',
+    description: 'Next.js + TypeScript + Tailwind CSSで構築したモダンなポートフォリオサイト。レスポンシブデザイン、アニメーション効果、GitHub Actions自動デプロイを実装。',
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GitHub Actions'],
+    url: 'https://shupopo.github.io/portfolio/',
+    github: 'https://github.com/shupopo/portfolio',
     category: 'web',
     featured: true
   },
@@ -260,7 +269,11 @@ const About = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">エンジニアとしての歩み</h3>
             <div className="space-y-4 text-gray-700">
               <p>
-                5年間の個人ECサイト運営を通じて培った自動化・効率化の専門知識を活かし、
+                大手プログラミングスクールでのインターン経験を経て、
+                上場ITコンサルティング企業にてブロックチェーン技術の
+                システム開発に従事しました。
+              </p>
+              <p>
                 現在はフリーランスエンジニアとして活動しています。
               </p>
               <p>

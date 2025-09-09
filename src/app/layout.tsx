@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Shuhei HIROSHIMA - 自動化・効率化エンジニア',
-  description: 'ビジネス課題を技術で解決し、業務効率化を実現するフリーランスエンジニア。Spring Boot、AWS、自動化ツール開発の専門家。',
+  description: 'ビジネス課題を技術で解決し、業務効率化を実現するフリーランスエンジニア。Spring Boot、AWS、自動化ツール開発。',
   keywords: ['Shuhei HIROSHIMA', 'フリーランスエンジニア', '自動化', '効率化', 'Spring Boot', 'AWS', 'Java'],
   authors: [{ name: 'Shuhei HIROSHIMA' }],
   openGraph: {
