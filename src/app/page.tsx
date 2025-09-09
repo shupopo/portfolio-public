@@ -40,7 +40,7 @@ const profileData = {
   name: 'Shuhei HIROSHIMA',
   title: '自動化・効率化エンジニア',
   location: '新潟県',
-  description: 'ビジネス課題を技術で解決し、業務効率化を実現するフリーランスエンジニア。5年間のECサイト運営自動化から、ブロックチェーン技術まで幅広い技術領域での開発経験を持つ。',
+  description: 'ビジネス課題を技術で解決し、業務効率化を実現するフリーランスエンジニア。ECサイト運営自動化から、ブロックチェーン技術まで幅広い技術領域での開発経験を持つ。',
   email: 'tumutrading2020@gmail.com'
 };
 
@@ -74,14 +74,6 @@ const skills: Skill[] = [
 
 const projects: Project[] = [
   {
-    id: 'ec-automation',
-    title: 'ECサイト運営自動化ツール',
-    description: '自身が運営するAmazon、Yahoo Shopping、au PAYマーケット向けの業務自動化システム。商品リサーチ、出品、価格管理、在庫管理を完全自動化し、大幅な工数削減を実現。',
-    tech: ['Node.js', 'Python', 'Amazon MWS API', 'Yahoo Shopping API', 'Puppeteer'],
-    category: 'automation',
-    featured: false
-  },
-  {
     id: 'crypto-wallet',
     title: '仮想通貨ウォレットシステム',
     description: 'AWS Lambda上で動作するサーバーレス仮想通貨ウォレット。Bitcoin・Ethereum両通貨対応のマルチウォレット機能。ブロックチェーン取引監視、アドレス管理、残高管理を自動化。',
@@ -99,13 +91,20 @@ const projects: Project[] = [
   },
     {
     id: 'portfolio-site',
-    title: 'エンジニアポートフォリオサイト',
+    title: 'ポートフォリオサイト（当サイト）',
     description: 'Next.js + TypeScript + Tailwind CSSで構築したモダンなポートフォリオサイト。レスポンシブデザイン、アニメーション効果、GitHub Actions自動デプロイを実装。',
     tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GitHub Actions'],
-    url: 'https://shupopo.github.io/portfolio/',
     github: 'https://github.com/shupopo/portfolio',
     category: 'web',
     featured: true
+  },
+  {
+    id: 'ec-automation',
+    title: 'ECサイト運営自動化ツール',
+    description: '自身が運営するAmazon、Yahoo Shopping、au PAYマーケット向けの業務自動化システム。商品リサーチ、出品、価格管理、在庫管理を完全自動化し、大幅な工数削減を実現。',
+    tech: ['Node.js', 'Python', 'Amazon MWS API', 'Yahoo Shopping API', 'Puppeteer'],
+    category: 'automation',
+    featured: false
   },
   {
     id: 'shooting-game',
