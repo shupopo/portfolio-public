@@ -94,7 +94,7 @@ const projects: Project[] = [
   title: 'Dr.Teal\'s エプソムソルトLP',
   description: 'A8.netアフィリエイト向けランディングページ。医薬部外品の効能訴求と感情に訴えるデザインでCVR向上を実現。',
   tech: ['Astro', 'Tailwind CSS', 'TypeScript', 'Cloudflare Pages'],
-  url: 'https://shupopo.github.io/shooting/',
+  url: 'https://epsom-salt.pages.dev/',
   category: 'web',
   featured: true
 },
