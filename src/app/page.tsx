@@ -89,6 +89,14 @@ const projects: Project[] = [
     category: 'web',
     featured: true
   },
+  {
+  id: 'dr-teals-epsom-salt-lp',
+  title: 'Dr.Teal\'s エプソムソルトLP',
+  description: 'A8.netアフィリエイト向けランディングページ。医薬部外品の効能訴求と感情に訴えるデザインでCVR向上を実現。',
+  tech: ['Astro', 'Tailwind CSS', 'TypeScript', 'Cloudflare Pages'],
+  category: 'web',
+  featured: true
+},
     {
     id: 'portfolio-site',
     title: 'ポートフォリオサイト（当サイト）',
@@ -96,7 +104,7 @@ const projects: Project[] = [
     tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GitHub Actions'],
     github: 'https://github.com/shupopo/portfolio',
     category: 'web',
-    featured: true
+    featured: false
   },
   {
     id: 'ec-automation',
