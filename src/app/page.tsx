@@ -94,6 +94,7 @@ const projects: Project[] = [
   title: 'Dr.Teal\'s エプソムソルトLP',
   description: 'A8.netアフィリエイト向けランディングページ。医薬部外品の効能訴求と感情に訴えるデザインでCVR向上を実現。',
   tech: ['Astro', 'Tailwind CSS', 'TypeScript', 'Cloudflare Pages'],
+  url: 'https://shupopo.github.io/shooting/',
   category: 'web',
   featured: true
 },
@@ -489,7 +490,7 @@ const Projects = () => {
                       className="flex items-center space-x-1 text-blue-600 hover:text-blue-800 text-sm"
                     >
                       <ExternalLink size={16} />
-                      <span>Demo</span>
+                      <span>View Project</span>
                     </a>
                   )}
                   {project.github && (
