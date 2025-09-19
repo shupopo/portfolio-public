@@ -776,4 +776,4 @@ const portfolio = () => {
   );
 };
 
-export default portfolio-public;
+export default portfolio;
