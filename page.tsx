@@ -762,7 +762,7 @@ const Footer = () => {
 };
 
 // メインコンポーネント
-const portfolio-public = () => {
+const portfolio = () => {
   return (
     <div className="min-h-screen">
       <Header />
