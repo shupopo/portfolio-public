@@ -5,8 +5,8 @@ const nextConfig = {
   },
   output: 'export',
   trailingSlash: true,
-  basePath: '/portfolio',
-  assetPrefix: '/portfolio',
+  basePath: '/portfolio-public',
+  assetPrefix: '/portfolio-public',
   images: {
     unoptimized: true
   }
