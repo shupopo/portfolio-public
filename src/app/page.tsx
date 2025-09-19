@@ -2,14 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { 
-  Github, 
-  ExternalLink, 
-  Mail, 
-  MapPin, 
-  Code, 
-  Database, 
-  Cloud, 
+import {
+  Github,
+  ExternalLink,
+  MapPin,
+  Code,
+  Database,
+  Cloud,
   Zap,
   ChevronDown,
   Menu,
@@ -98,15 +97,7 @@ const projects: Project[] = [
   category: 'web',
   featured: true
 },
-    {
-    id: 'portfolio-site',
-    title: 'ポートフォリオサイト（当サイト）',
-    description: 'Next.js + TypeScript + Tailwind CSSで構築したモダンなポートフォリオサイト。レスポンシブデザイン、アニメーション効果、GitHub Actions自動デプロイを実装。',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GitHub Actions'],
-    github: 'https://github.com/shupopo/portfolio',
-    category: 'web',
-    featured: false
-  },
+    ,
   {
     id: 'ec-automation',
     title: 'ECサイト運営自動化ツール',
@@ -176,7 +167,7 @@ const Header = () => {
         </motion.div>
         
         <nav className="hidden md:flex space-x-8">
-          {['About', 'Skills', 'Works', 'Contact'].map((item) => (
+          {['About', 'Skills', 'Works'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -201,7 +192,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4"
         >
-          {['About', 'Skills', 'Works', 'Contact'].map((item) => (
+          {['About', 'Skills', 'Works'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -514,198 +505,12 @@ const Projects = () => {
   );
 };
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      const response = await fetch('https://formspree.io/f/xandvepa', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Contact</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-gray-600">
-            自動化・効率化に関するご相談、プロジェクトのお問い合わせはこちらから
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">お気軽にお問い合わせください</h3>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <MapPin className="text-blue-600" size={20} />
-                <span className="text-gray-700">{profileData.location}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="text-blue-600" size={20} />
-                <span className="text-gray-700">お問い合わせフォームをご利用ください</span>
-              </div>
-            </div>
-            
-            <div className="mt-8">
-              <h4 className="font-semibold text-gray-900 mb-4">対応可能な案件</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Spring Boot / Java バックエンド開発</li>
-                <li>• AWS サーバーレスアプリケーション構築</li>
-                <li>• 業務自動化ツール開発</li>
-                <li>• ECサイト運営システム構築</li>
-                <li>• API開発・外部システム連携</li>
-              </ul>
-            </div>
-          </motion.div>
-
-          <motion.form
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            onSubmit={handleSubmit}
-            className="space-y-6"
-          >
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                お名前 *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                メールアドレス *
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                件名 *
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                メッセージ *
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {submitStatus === 'success' && (
-              <div className="p-4 bg-green-100 text-green-700 rounded-lg mb-6">
-                お問い合わせありがとうございます。追って連絡いたします。
-              </div>
-            )}
-
-            {submitStatus === 'error' && (
-              <div className="p-4 bg-red-100 text-red-700 rounded-lg mb-6">
-                送信に失敗しました。しばらくしてから再度お試しください。
-              </div>
-            )}
-
-            <motion.button
-              type="submit"
-              disabled={isSubmitting}
-              className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
-                isSubmitting
-                  ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-blue-600 hover:bg-blue-700'
-              } text-white`}
-              whileHover={!isSubmitting ? { scale: 1.02 } : {}}
-              whileTap={!isSubmitting ? { scale: 0.98 } : {}}
-            >
-              {isSubmitting ? '送信中...' : '送信する'}
-            </motion.button>
-          </motion.form>
-        </div>
-      </div>
-    </section>
-  );
-};
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">{profileData.name}</h3>
             <p className="text-gray-400 mb-4">{profileData.title}</p>
@@ -714,7 +519,7 @@ const Footer = () => {
               ビジネスの成長を技術で支援します。
             </p>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4">専門分野</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
@@ -723,21 +528,6 @@ const Footer = () => {
               <li>業務自動化ツール開発</li>
               <li>ECサイトシステム構築</li>
             </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">お問い合わせ</h4>
-            <p className="text-gray-400 text-sm mb-4">
-              プロジェクトのご相談は<br />
-              お気軽にお問い合わせください
-            </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 text-sm"
-            >
-              <Mail size={16} />
-              <span>お問い合わせフォーム</span>
-            </a>
           </div>
         </div>
         
@@ -770,7 +560,6 @@ const Portfolio = () => {
       <About />
       <Skills />
       <Projects />
-      <Contact />
       <Footer />
     </div>
   );
