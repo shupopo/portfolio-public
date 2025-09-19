@@ -1,4 +1,4 @@
-# Shuhei HIROSHIMA - ポートフォリオサイト
+# Shupopo - ポートフォリオサイト
 
 自動化・効率化エンジニアのプロフェッショナルポートフォリオサイト
 
@@ -138,4 +138,4 @@ MIT License
 
 ## 作成者
 
-Shuhei HIROSHIMA - 自動化・効率化エンジニア
+Shupopo - 自動化・効率化エンジニア

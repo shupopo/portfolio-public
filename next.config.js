@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
   output: 'export',
   trailingSlash: true,
-  basePath: '/portfolio-public',
-  assetPrefix: '/portfolio-public',
+  // GitHub Pages用の設定は本番時のみ適用
+  ...(process.env.NODE_ENV === 'production' ? {
+    basePath: '/portfolio-public',
+    assetPrefix: '/portfolio-public',
+  } : {}),
   images: {
     unoptimized: true
   }

@@ -36,7 +36,7 @@ interface Skill {
 
 // データ
 const profileData = {
-  name: 'Shuhei HIROSHIMA',
+  name: 'Shupopo',
   title: '自動化・効率化エンジニア',
   location: '新潟県',
   description: 'ビジネス課題を技術で解決し、業務効率化を実現するフリーランスエンジニア。ECサイト運営自動化から、ブロックチェーン技術まで幅広い技術領域での開発経験を持つ。',
@@ -163,7 +163,7 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           className="text-xl font-bold text-gray-900"
         >
-          Shuhei HIROSHIMA
+          Shupopo
         </motion.div>
         
         <nav className="hidden md:flex space-x-8">
