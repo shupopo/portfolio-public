@@ -91,16 +91,6 @@ const projects: Project[] = [
     featured: true
   },
   {
-  id: 'llm-hello-world',
-  title: 'LLM Hello World',
-  description: 'Streamlit Community Cloud にデプロイしたシンプルな LLM アプリ。ユーザーが入力した質問に対して OpenAI API を呼び出し、生成AIの応答を返す最小構成のデモ。',
-  tech: ['Python', 'Streamlit', 'OpenAI API'],
-  url: 'https://shupopo-streamlit-practice-app-y9ouww.streamlit.app/',
-  github: 'https://github.com/shupopo/streamlit_practice',
-  category: 'ai',
-  featured: true,  
-},
-  {
   id: 'dr-teals-epsom-salt-lp',
   title: 'Dr.Teal\'s エプソムソルトLP',
   description: 'A8.netアフィリエイト向けランディングページ。医薬部外品の効能訴求と感情に訴えるデザインでCVR向上を実現。',
